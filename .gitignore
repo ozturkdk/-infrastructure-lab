@@ -1,0 +1,5 @@
+AGENTS.md
+infrastructure/authentik/.env
+infrastructure/authentik/data/
+infrastructure/authentik/certs/
+infrastructure/authentik/custom-templates/

@@ -3,4 +3,5 @@ nav:
   - Om projektet: index.md
   - Engineering Log:
       - "001 – Identitetsstyring": engineering-log/001-identitetsstyring.md
+      - "002 – Lokal installation af Authentik": engineering-log/002-lokal-authentik.md
   - Begreber: begreber.md
