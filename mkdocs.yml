@@ -1,1 +1,6 @@
 site_name: Öztürk's Lab
+nav:
+  - Om projektet: index.md
+  - Engineering Log:
+      - "001 – Identitetsstyring": engineering-log/001-identitetsstyring.md
+  - Begreber: begreber.md
