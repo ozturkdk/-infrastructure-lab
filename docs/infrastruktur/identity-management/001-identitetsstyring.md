@@ -13,11 +13,11 @@ Derfor ønskes en central identitetsløsning, som fremtidige services så vidt m
 Den første løsning bør som minimum understøtte:
 
 - Central administration af brugere og grupper
-- [Single Sign-On (SSO)](../begreber.md#sso-single-sign-on)
-- [Multi-Factor Authentication (MFA)](../begreber.md#mfa-multi-factor-authentication)
+- [Single Sign-On (SSO)](../../begreber.md#sso-single-sign-on)
+- [Multi-Factor Authentication (MFA)](../../begreber.md#mfa-multi-factor-authentication)
 - Rolle- eller gruppebaseret adgang
 - Integration med forskellige typer applikationer
-- Standardiserede protokoller som [OpenID Connect (OIDC)](../begreber.md#oidc-openid-connect)
+- Standardiserede protokoller som [OpenID Connect (OIDC)](../../begreber.md#oidc-openid-connect)
 - Mulighed for senere udvidelse af infrastrukturen
 
 ## Principper
@@ -42,7 +42,7 @@ Tre forskellige løsninger er blevet undersøgt som udgangspunkt for organisatio
 
 Microsoft Entra ID er en cloudbaseret identitetsplatform, hvor den underliggende infrastruktur drives og vedligeholdes af Microsoft.
 
-Løsningen reducerer dermed organisationens eget driftsansvar og tilbyder blandt andet central administration af brugere og grupper, [Single Sign-On (SSO)](../begreber.md#sso-single-sign-on) og [Multi-Factor Authentication (MFA)](../begreber.md#mfa-multi-factor-authentication).
+Løsningen reducerer dermed organisationens eget driftsansvar og tilbyder blandt andet central administration af brugere og grupper, [Single Sign-On (SSO)](../../begreber.md#sso-single-sign-on) og [Multi-Factor Authentication (MFA)](../../begreber.md#mfa-multi-factor-authentication).
 
 Entra ID har samtidig en tæt integration med Microsofts øvrige økosystem, herunder Microsoft 365 og Azure. Dette kan være en væsentlig fordel for organisationer, der allerede anvender disse platforme.
 
@@ -54,11 +54,11 @@ Entra ID er fortsat en relevant mulighed, hvis organisationens behov eller valg 
 
 Keycloak er en open source-identitetsplatform, der kan drives på organisationens egen infrastruktur.
 
-Platformen understøtter blandt andet [OpenID Connect](../begreber.md#oidc-openid-connect), [OAuth 2.0](../begreber.md#oauth-20) og [SAML](../begreber.md#saml-security-assertion-markup-language) og tilbyder omfattende muligheder for eksempelvis [identity federation](../begreber.md#identity-federation), integration med [eksterne identity providers](../begreber.md#ekstern-identity-provider) og konfiguration af [authentication flows](../begreber.md#authentication-flow).
+Platformen understøtter blandt andet [OpenID Connect](../../begreber.md#oidc-openid-connect), [OAuth 2.0](../../begreber.md#oauth-20) og [SAML](../../begreber.md#saml-security-assertion-markup-language) og tilbyder omfattende muligheder for eksempelvis [identity federation](../../begreber.md#identity-federation), integration med [eksterne identity providers](../../begreber.md#ekstern-identity-provider) og konfiguration af [authentication flows](../../begreber.md#authentication-flow).
 
 Denne fleksibilitet gør Keycloak velegnet til miljøer med mere komplekse krav til identitets- og adgangsstyring.
 
-Organisationens nuværende behov er imidlertid forholdsvis begrænset. Det primære behov består i central administration af brugere og grupper, [MFA](../begreber.md#mfa-multi-factor-authentication) samt [Single Sign-On](../begreber.md#sso-single-sign-on) til interne services.
+Organisationens nuværende behov er imidlertid forholdsvis begrænset. Det primære behov består i central administration af brugere og grupper, [MFA](../../begreber.md#mfa-multi-factor-authentication) samt [Single Sign-On](../../begreber.md#sso-single-sign-on) til interne services.
 
 En stor del af Keycloaks fleksibilitet og funktionalitet forventes derfor ikke at blive udnyttet på nuværende tidspunkt. Det betyder ikke, at Keycloak vurderes som en dårligere løsning, men at platformens omfang ikke vurderes nødvendigt for organisationens nuværende krav.
 
@@ -66,7 +66,7 @@ En stor del af Keycloaks fleksibilitet og funktionalitet forventes derfor ikke a
 
 Authentik er ligeledes en open source-identitetsplatform, der kan drives på organisationens egen infrastruktur.
 
-Platformen understøtter blandt andet [OpenID Connect](../begreber.md#oidc-openid-connect), [OAuth 2.0](../begreber.md#oauth-20), [SAML](../begreber.md#saml-security-assertion-markup-language), [LDAP](../begreber.md#ldap-lightweight-directory-access-protocol) og [SCIM](../begreber.md#scim-system-for-cross-domain-identity-management). Det giver mulighed for at integrere forskellige typer applikationer gennem standardiserede protokoller uden at være bundet til en bestemt cloudplatform eller applikationssuite.
+Platformen understøtter blandt andet [OpenID Connect](../../begreber.md#oidc-openid-connect), [OAuth 2.0](../../begreber.md#oauth-20), [SAML](../../begreber.md#saml-security-assertion-markup-language), [LDAP](../../begreber.md#ldap-lightweight-directory-access-protocol) og [SCIM](../../begreber.md#scim-system-for-cross-domain-identity-management). Det giver mulighed for at integrere forskellige typer applikationer gennem standardiserede protokoller uden at være bundet til en bestemt cloudplatform eller applikationssuite.
 
 Authentik dækker dermed de centrale krav, der er defineret for organisationen, samtidig med at platformens omfang vurderes passende til det nuværende miljø.
 
@@ -80,7 +80,7 @@ Authentik vælges som organisationens første centrale identitetsplatform.
 
 Valget er ikke baseret på, at Authentik generelt vurderes som en bedre identitetsplatform end hverken Keycloak eller Microsoft Entra ID. Valget tager udgangspunkt i organisationens nuværende krav.
 
-Authentik opfylder behovet for central brugeradministration, [MFA](../begreber.md#mfa-multi-factor-authentication) og [Single Sign-On](../begreber.md#sso-single-sign-on) og understøtter samtidig flere standardiserede protokoller, som giver mulighed for integration med forskellige typer services.
+Authentik opfylder behovet for central brugeradministration, [MFA](../../begreber.md#mfa-multi-factor-authentication) og [Single Sign-On](../../begreber.md#sso-single-sign-on) og understøtter samtidig flere standardiserede protokoller, som giver mulighed for integration med forskellige typer services.
 
 Keycloak tilbyder tilsvarende funktionalitet og større fleksibilitet på en række områder, men denne fleksibilitet vurderes ikke nødvendig i det nuværende miljø.
 
@@ -91,3 +91,8 @@ Valget af Authentik indebærer derfor et bevidst kompromis: Organisationen opnå
 Efterhånden som flere services bliver afhængige af identitetsplatformen, vil konsekvenserne ved nedetid samtidig blive større. Backup, overvågning, opdateringer og disaster recovery skal derfor adresseres som infrastrukturen udvikler sig.
 
 Beslutningen skal genovervejes, hvis organisationens krav, størrelse eller øvrige infrastruktur ændrer sig.
+
+
+## Videre implementering
+
+Hostingbeslutning, installationskommandoer og validering beskrives i [002 – Lokal installation af Authentik](002-lokal-authentik.md).

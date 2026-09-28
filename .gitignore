@@ -1,4 +1,5 @@
 AGENTS.md
+site/
 infrastructure/authentik/.env
 infrastructure/authentik/data/
 infrastructure/authentik/certs/
