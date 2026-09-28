@@ -3,9 +3,10 @@ nav:
   - Om projektet: index.md
   - Infrastruktur:
       - Identity Management:
-          - "Oversigt": infrastruktur/identity-management/index.md
-          - "001 – Identitetsstyring": infrastruktur/identity-management/001-identitetsstyring.md
-          - "002 – Lokal installation af Authentik": infrastruktur/identity-management/002-lokal-authentik.md
+        - "Oversigt": infrastruktur/identity-management/index.md
+        - "001 – Identitetsstyring": infrastruktur/identity-management/001-identitetsstyring.md
+        - "002 – Lokal installation af Authentik": infrastruktur/identity-management/002-lokal-authentik.md
+        - "003 – Første login og validering": infrastruktur/identity-management/003-foerste-login.md
   - Installationer:
     - Docker på Debian: installationer/docker-installation-debian.md
   - Begreber: begreber.md
@@ -14,6 +15,3 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path: ["."]
       check_paths: true
-
-extra_javascript:
-  - javascripts/identity-management-nav.js

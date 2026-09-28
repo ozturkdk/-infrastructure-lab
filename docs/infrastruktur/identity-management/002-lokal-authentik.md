@@ -8,9 +8,9 @@ Maskinen kører Debian 13 og har 8 logiske CPU'er og 16 GiB RAM. Authentiks inst
 
 ## Alternativer og beslutning
 
-En lokal installation genbruger eksisterende ressourcer. En separat VM ville give yderligere isolation, men kræver administration af endnu et operativsystem. En VM på samme laptop er fortsat utilgængelig, når laptoppen er slukket eller i dvale. Ekstern hosting ville muliggøre drift uafhængigt af arbejdsstationen, men indebærer omkostninger og et driftsbehov, som endnu ikke er fastlagt.
+Labmaskinen opfylder Authentiks minimumskrav, så installationen kan køre på dens eksisterende CPU og hukommelse uden en ekstra server. Et alternativ er at køre Docker Compose i en separat VM på laptoppen. Det isolerer Authentik bedre fra værtsmaskinen, men kræver administration af endnu et operativsystem, og VM'en er stadig utilgængelig, når laptoppen er slukket eller i dvale. Ekstern hosting ville være uafhængig af arbejdsstationen, men indebærer omkostninger og et driftsbehov, som endnu ikke er fastlagt.
 
-Vi vælger Docker Compose direkte på den lokale maskine, fordi Authentik består af flere services, der skal køre sammen: server, worker og PostgreSQL. Compose samler konfigurationen af dem i én fil. Authentik dokumenterer metoden til [test og mindre produktionsinstallationer](https://docs.goauthentik.io/install-config/install/docker-compose). Ulempen ved at køre direkte på maskinen er, at installationen afhænger af den og ikke er isoleret som en separat VM.
+Vi vælger at køre Docker Compose direkte på laptoppen frem for i en VM. Det undgår administration af et ekstra operativsystem og passer til behovet for at konfigurere Authentik og kontrollere login. Compose samler Authentiks server, worker og PostgreSQL i én konfiguration og er dokumenteret til [test og mindre produktionsinstallationer](https://docs.goauthentik.io/install-config/install/docker-compose). Kompromiset er, at installationen ikke er isoleret fra værtsmaskinen og kun er tilgængelig, når laptoppen kører.
 
 ## Implementering
 
