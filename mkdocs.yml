@@ -7,6 +7,9 @@ nav:
         - "001 – Identitetsstyring": infrastruktur/identity-management/001-identitetsstyring.md
         - "002 – Lokal installation af Authentik": infrastruktur/identity-management/002-lokal-authentik.md
         - "003 – Første login og validering": infrastruktur/identity-management/003-foerste-login.md
+      - Deployment:
+        - "Oversigt": infrastruktur/deployment/index.md
+        - "001 – Publicering af dokumentationssiden": infrastruktur/deployment/001-publicering-af-dokumentationssiden.md
   - Installationer:
     - Docker på Debian: installationer/docker-installation-debian.md
   - Begreber: begreber.md
